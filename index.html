@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione prove olimpiadi</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="formDiv">
+        <h1>Gestione dei punteggi</h1>
+        <hr>
+        <form>
+            <label>Nominativo <input type="text" id="nominativo"></label>
+        </form>
+
+        <form>
+            <label>Sesso</label>
+            <select id="sesso">
+                <option>M</option>
+                <option>F</option>
+            </select>
+        </form>
+
+        <form>
+            <label>Classe</label>
+            <select id="classe">
+                <option>3A-IA</option>
+                <option>3B-IA</option>
+                <option>3C-IA</option>
+                <option>4A-IA</option>
+                <option>4B-IA</option>
+                <option>4C-IA</option>
+                <option>4D-IA</option>
+            </select>
+        </form>
+
+        <form>
+            <label>Punteggio</label>
+            <input placeholder="Min=1 Max=40" type="number" id="punteggio">
+        </form>
+        
+        <button id="inserisci" onclick="addScore()">Inserisci</button>
+
+        <hr>
+        <p>Filtra dati per: </p>
+        <form>
+            <label>Sesso</label>
+            <select id="filtra_sesso">
+                <option value=" "> </option>
+                <option value="M">M</option>
+                <option value="F">F</option>
+            </select>
+        </form>
+
+        <form>
+            <label>Classe</label>
+            <select id="filtra_classe">
+                <option> </option>
+                <option value="3A-IA">3A-IA</option>
+                <option value="3B-IA">3B-IA</option>
+                <option value="3C-IA">3C-IA</option>
+                <option value="4A-IA">4A-IA</option>
+                <option value="4B-IA">4B-IA</option>
+                <option value="4C-IA">4C-IA</option>
+                <option value="4D-IA">4D-IA</option>
+            </select>
+        </form>
+        <button id="filtra" onclick="filterData()">Filtra</button>
+        <hr>
+
+    </div>
+
+    <table id="table">
+        <tr>
+            <th>Nominativo</th>
+            <th>Sesso</th>
+            <th>Classe</th>
+            <th>Punteggio</th>
+        </tr>
+    </table>
+    
+
+    <script src="./js/main.js" onload="init()"></script>
+</body>
+</html>
